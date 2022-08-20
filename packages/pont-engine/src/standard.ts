@@ -260,6 +260,10 @@ export class StandardDataType extends Contextable {
       return 'false';
     }
 
+    if (this.typeName === 'number') {
+      return 0;
+    }
+
     if (this.enum && this.enum.length) {
       const str = this.enum[0];
 
